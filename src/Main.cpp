@@ -1,46 +1,52 @@
 #include <iostream>
+#include <string>
+//#include "Log.h"
 
-class Log
+
+class Printable 
 {
-public: 
-    const int LogLevelError = 0;
-    const int LogLevelWarning = 1;
-    const int LogLevelInfo = 2;
-private:
-    int m_LogLevel = LogLevelInfo;
-
 public:
-    void SetLevel(int level)
-    {
-        m_LogLevel = level;
-    }
-
-    void Error(const char* message)
-    {
-        if (m_LogLevel >= LogLevelError)
-            std::cout << "[ERROR]: " << message << std::endl;
-    }
-
-    void Warn(const char* message) 
-    {
-        if (m_LogLevel >= LogLevelWarning)
-            std::cout << "[WARNING]: " << message << std::endl;
-    }
-
-    void Info(const char* message)
-    {
-        if (m_LogLevel >= LogLevelInfo)
-            std::cout << "[INFO]: " << message << std::endl;
-    }
+    virtual std::string GetClassName() = 0;
 };
+
+class Entity : public Printable
+{
+public:
+    virtual std::string GetName() { return "Entity"; }
+    std::string GetClassName() override { return "Entity"; }
+
+};
+
+class Player : public Entity
+{
+private:
+    std::string m_Name;
+public:
+    Player(const std::string& name)
+        : m_Name(name) {}
+
+    std::string GetName() override { return m_Name; }
+    std::string GetClassName() override { return "Player"; }
+};
+
+void PrintName(Entity* entity) {
+    std::cout << entity->GetName() << std::endl;
+}
+
+void Print(Printable* obj) {
+    std::cout << obj->GetClassName() << std::endl;
+}
 
 int main()
 {
-    Log log;
-    log.SetLevel(log.LogLevelWarning);
-    log.Warn("Hello!");
-    log.Error("Hello!");
-    log.Info("Hello!");
+    Entity* e = new Entity();
+    //PrintName(e);
+
+    Player* p = new Player("Cherno");
+    //PrintName(p);
+
+    Print(e);
+    Print(p);
 
     std::cin.get();
 }
