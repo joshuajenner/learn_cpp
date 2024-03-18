@@ -1,13 +1,21 @@
 #include <iostream>
+#include <string>
 
+#include <stdlib.h>
 
 int main()
 {
-    int example[5];
-    
-    int* another = new int[5];
-    delete[] another;
 
+
+    char name[] = "Cherno";
+    name[2] = 'a';
+
+    const char* name1 = u8"Cherno";
+    const wchar_t* name2 = L"Cherno";
+    const char16_t* name3 = u"Cherno";
+    const char32_t* name4 = U"Cherno";
+
+    std::cout << name << std::endl;
     std::cin.get();
 }
 
