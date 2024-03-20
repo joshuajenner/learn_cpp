@@ -149,9 +149,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MemberList.cpp" />
     <ClCompile Include="src\Log.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Static.cpp" />
+    <ClCompile Include="Strings.cpp" />
     <ClCompile Include="VirtualFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>

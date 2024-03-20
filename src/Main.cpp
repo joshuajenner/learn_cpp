@@ -1,22 +1,37 @@
 #include <iostream>
 #include <string>
 
-#include <stdlib.h>
+using String = std::string;
+
+class Entity
+{
+private:
+    String m_Name;
+public:
+    Entity() : m_Name("Unkown") {}
+    Entity(const String& name) : m_Name(name) {}
+
+    const String& GetName() const { return m_Name; }
+};
+
+void Function() {
+
+}
 
 int main()
 {
+    Entity* entity = new Entity("Charno");
+    std::cout << (*entity).GetName() << std::endl;
+
+    delete entity;
 
 
-    char name[] = "Cherno";
-    name[2] = 'a';
+    int* heapNum = new int;
 
-    const char* name1 = u8"Cherno";
-    const wchar_t* name2 = L"Cherno";
-    const char16_t* name3 = u"Cherno";
-    const char32_t* name4 = U"Cherno";
 
-    std::cout << name << std::endl;
     std::cin.get();
 }
+
+
 
 
