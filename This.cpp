@@ -36,7 +36,7 @@ void PrintEntity(const Entity& e)
 
 }
 
-int main()
-{
-	std::cin.get();
-}
+//int main()
+//{
+//	std::cin.get();
+//}
