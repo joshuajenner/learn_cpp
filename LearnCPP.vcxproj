@@ -149,11 +149,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Explicit.cpp" />
     <ClCompile Include="MemberList.cpp" />
+    <ClCompile Include="ObjectLifetime.cpp" />
+    <ClCompile Include="OperatorOverloading.cpp" />
+    <ClCompile Include="SmartPointers.cpp" />
     <ClCompile Include="src\Log.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Static.cpp" />
     <ClCompile Include="Strings.cpp" />
+    <ClCompile Include="This.cpp" />
     <ClCompile Include="VirtualFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
