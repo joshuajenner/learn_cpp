@@ -5,8 +5,6 @@
 #include <iostream>
 #include <string>
 
-void PrintEntity(const Entity& e);
-
 class Entity 
 {
 public:
@@ -21,7 +19,7 @@ public:
 		this->x = x;
 		this->y = y;
 
-		PrintEntity(*this);
+		//PrintEntity(*this);
 	}
 
 	int GetX() const 
@@ -31,10 +29,10 @@ public:
 };
 
 
-void PrintEntity(const Entity& e) 
-{
-
-}
+//void PrintEntity(const Entity& e) 
+//{
+//
+//}
 
 //int main()
 //{
