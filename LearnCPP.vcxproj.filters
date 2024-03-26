@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\LocalStatic.cpp">
+    <ClCompile Include="src\DynamicLinking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
