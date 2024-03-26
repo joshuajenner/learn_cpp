@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CopyConstructor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ArrowOperator.cpp">
+    <ClCompile Include="src\LocalStatic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
