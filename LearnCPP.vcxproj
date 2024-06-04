@@ -156,6 +156,7 @@
     <ClInclude Include="src\Log.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Casting.cpp" />
     <ClCompile Include="src\VirtualDestructors.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
